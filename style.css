@@ -83,7 +83,70 @@ h1 {
 }
 
 .highlight {
-    color: #0ff; 
+    text-decoration: underline;
+    text-decoration-color: #00d1ff; 
+    text-decoration-thickness: 2px;
     font-weight: bold;
-    text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8);
 }
+
+#about {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(15, 15, 15, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.7);
+    border: 2px solid #0ff;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#about h2 {
+    color: #ff00ff;
+    text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.8);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+#about p {
+    color: #0ff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.achievements-list {
+    list-style: none; 
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.achievements-list li {
+    background: rgba(0, 221, 255, 0.1);
+    border-left: 4px solid #0ff; 
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #0ff;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.achievements-list li:hover {
+    transform: scale(1.05);
+    background: rgba(0, 221, 255, 0.2);
+}
+
