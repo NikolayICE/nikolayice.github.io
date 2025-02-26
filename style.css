@@ -1,26 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #050A0E;
+    color: #0ff;
     text-align: center;
     margin: 0;
     padding: 50px;
 }
 
 .container {
-    background: white;
+    background: rgba(15, 15, 15, 0.9);
     padding: 20px;
     max-width: 600px;
     margin: auto;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.7);
+    border: 2px solid #0ff;
 }
 
 h1 {
-    color: #333;
+    color: #ff00ff;
+    text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.8);
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #0ff;
+}
+
+a {
+    text-decoration: none;
+    color: #ff00ff;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #0ff;
+    text-shadow: 0px 0px 10px #0ff;
+}
+
+.social-links {
+    margin-top: 20px;
 }
 
 .social-links a {
-    text-decoration: none;
-    color: #007BFF;
+    display: inline-block;
+    font-size: 18px;
     margin: 0 10px;
+    padding: 8px 16px;
+    border: 2px solid #ff00ff;
+    border-radius: 5px;
+    background: rgba(255, 0, 255, 0.2);
+    box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.5);
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #ff00ff;
+    color: #050A0E;
+    box-shadow: 0px 0px 15px #ff00ff;
+}
+
+img {
+    border-radius: 50%;
+    border: 3px solid #0ff;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.8);
+    max-width: 150px;
+    margin-top: 10px;
+}
+
+@keyframes neonGlow {
+    0% { text-shadow: 0 0 10px #ff00ff; }
+    50% { text-shadow: 0 0 20px #0ff, 0 0 30px #ff00ff; }
+    100% { text-shadow: 0 0 10px #ff00ff; }
+}
+
+h1 {
+    animation: neonGlow 1.5s infinite alternate;
 }
