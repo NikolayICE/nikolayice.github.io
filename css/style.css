@@ -8,22 +8,23 @@ body {
   }
   
   .section {
-    padding: 40px 20px;
+    padding: 20px 10px;
     max-width: 900px;
     margin: 0 auto;
   }
   
   .header-section {
     text-align: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   
   .header-section h1 {
-    color: #a450d4; 
+    color: #ff69b4; 
     font-size: 2.8em;
     margin: 0 0 20px;
-    text-shadow: 0 0 10px rgba(164, 80, 212, 0.8), 0 0 20px rgba(164, 80, 212, 0.6);
+    text-shadow: 0 0 10px rgba(255,105,180,0.8), 0 0 20px rgba(255,105,180,0.6);
+    animation: neonBlink 1.5s ease-in-out infinite alternate;
   }
   
   .header-section p {
@@ -33,12 +34,13 @@ body {
   }
   
   .highlight {
-    color: #39ff14; 
-    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #ff69b4;
+    font-weight: normal;
   }
   
   h2 {
-    color: #00ffe8; 
+    color: #ff69b4;
     font-size: 2.2em;
     margin-bottom: 20px;
   }
@@ -51,15 +53,18 @@ body {
   
   .achievements-list li {
     margin-bottom: 10px;
-    padding-left: 25px;
+    padding-left: 30px;
     position: relative;
+    font-size: 1.1em;
   }
   
   .achievements-list li::before {
-    content: '●';
-    color: #39ff14;
+    content: '◆';
+    color: #ff69b4;
+    font-size: 1.2em;
     position: absolute;
     left: 0;
+    top: 0;
   }
   
   .skills-list {
@@ -100,5 +105,14 @@ body {
   .reveal.active {
     opacity: 1;
     transform: translateY(0);
+  }
+  
+  @keyframes neonBlink {
+    from {
+      text-shadow: 0 0 10px rgba(255,105,180,0.8), 0 0 20px rgba(255,105,180,0.6);
+    }
+    to {
+      text-shadow: 0 0 20px rgba(255,182,193,1), 0 0 30px rgba(255,182,193,0.8);
+    }
   }
   
