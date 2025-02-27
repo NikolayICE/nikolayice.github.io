@@ -36,10 +36,13 @@ body {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    padding: 5px 10px;
 }
 
-.nav-list li a:hover {
+.nav-list li a:hover,
+.nav-list li a.active {
     color: #d600ff;
+    border-bottom: 2px solid #d600ff;
 }
 
 .section {
@@ -225,6 +228,8 @@ h2.revealed::after {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    /* Убираем темный фон */
+    background: transparent;
 }
 
 .contact-buttons {

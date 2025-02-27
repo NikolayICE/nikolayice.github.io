@@ -19,4 +19,23 @@ document.addEventListener('DOMContentLoaded', function () {
     reveals.forEach(reveal => {
         observer.observe(reveal);
     });
+
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-list li a');
+    const navObserverOptions = { threshold: 0.5 };
+    const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const id = entry.target.getAttribute('id');
+            const navLink = document.querySelector(`.nav-list li a[href="#${id}"]`);
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                if (navLink) {
+                    navLink.classList.add('active');
+                }
+            }
+        });
+    }, navObserverOptions);
+    sections.forEach(section => {
+        navObserver.observe(section);
+    });
 });
