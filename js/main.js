@@ -5,17 +5,17 @@ document.addEventListener('DOMContentLoaded', function () {
       threshold: 0.2
     };
   
-    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+    const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-          observer.unobserve(entry.target); 
+          observer.unobserve(entry.target);
         }
       });
     }, options);
   
     reveals.forEach(reveal => {
-      revealOnScroll.observe(reveal);
+      observer.observe(reveal);
     });
   });
   
