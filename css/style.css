@@ -92,24 +92,29 @@ h2 {
 
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    margin-top: 10px;
+    grid-template-columns: repeat(2, max-content);
+    gap: 5px;
+    justify-content: center;
 }
 
 .tech-item {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 5px;
     background: rgba(0, 255, 232, 0.1);
-    padding: 6px 8px;
+    padding: 4px 6px;
     border-radius: 4px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .tech-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 8px rgba(214, 0, 255, 0.7);
+    box-shadow: none;
+}
+
+.tech-item.full {
+    grid-column: span 2;
+    justify-self: center;
 }
 
 .tech-item img {
