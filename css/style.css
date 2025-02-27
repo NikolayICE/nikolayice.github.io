@@ -48,6 +48,7 @@ h2 {
     font-size: 1.8em;
     margin-bottom: 5px;
     position: relative;
+    overflow: hidden;
 }
 
 h2::after {
@@ -142,9 +143,8 @@ h2.revealed::after {
 .about-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
 }
 
 .portrait-container {
@@ -163,8 +163,7 @@ h2.revealed::after {
 }
 
 .about-text {
-    flex: 1 1 300px;
-    max-width: 600px;
+    flex: 1 1 auto;
 }
 
 .contact-info {
@@ -230,5 +229,23 @@ h2.revealed::after {
 
     to {
         text-shadow: 0 0 5px rgba(84, 193, 230, 0.9), 0 0 8px rgba(84, 193, 230, 0.7);
+    }
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portrait-container {
+        margin-bottom: 10px;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-content: center;
     }
 }
