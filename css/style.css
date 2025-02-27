@@ -24,7 +24,7 @@ body {
     color: #d600ff;
     font-size: 2em;
     margin: 0 0 5px;
-    text-shadow: 0 0 3px rgba(214, 0, 255, 0.7), 0 0 6px rgba(214, 0, 255, 0.5);
+    text-shadow: 0 0 2px rgba(214, 0, 255, 0.5), 0 0 4px rgba(214, 0, 255, 0.3);
     animation: neonSlide 2s ease-in-out infinite alternate;
 }
 
@@ -92,9 +92,10 @@ h2 {
 
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 5px;
-    justify-content: center;
+    margin-top: 10px;
+    align-items: stretch;
 }
 
 .tech-item {
@@ -107,14 +108,9 @@ h2 {
     transition: transform 0.3s ease;
 }
 
-.tech-item:hover {
+.tech-item:hover,
+.tech-item:active {
     transform: scale(1.05);
-    box-shadow: none;
-}
-
-.tech-item.full {
-    grid-column: span 2;
-    justify-self: center;
 }
 
 .tech-item img {
@@ -130,7 +126,7 @@ h2 {
 .reveal {
     opacity: 0;
     transform: translateX(-30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .reveal.active {
@@ -140,11 +136,11 @@ h2 {
 
 @keyframes neonSlide {
     from {
-        text-shadow: 0 0 3px rgba(214, 0, 255, 0.7), 0 0 6px rgba(214, 0, 255, 0.5);
+        text-shadow: 0 0 2px rgba(214, 0, 255, 0.5), 0 0 4px rgba(214, 0, 255, 0.3);
     }
 
     to {
-        text-shadow: 0 0 5px rgba(214, 0, 255, 0.9), 0 0 8px rgba(214, 0, 255, 0.7);
+        text-shadow: 0 0 3px rgba(214, 0, 255, 0.7), 0 0 6px rgba(214, 0, 255, 0.5);
     }
 }
 
