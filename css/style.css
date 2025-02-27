@@ -6,116 +6,149 @@ body {
     color: #00ffe8;
     font-size: 1.2em;
     line-height: 1.6;
-  }
-  .section {
+}
+
+.section {
     padding: 8px 10px;
     max-width: 900px;
     margin: 0 auto;
-  }
-  .header-section {
+}
+
+.header-section {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-  }
-  .header-section h1 {
+}
+
+.header-section h1 {
     color: #d600ff;
     font-size: 2em;
     margin: 0 0 5px;
-    text-shadow: 0 0 3px rgba(214,0,255,0.7), 0 0 6px rgba(214,0,255,0.5);
-    animation: neonBlink 2s ease-in-out infinite alternate;
-  }
-  .header-section p {
+    text-shadow: 0 0 3px rgba(214, 0, 255, 0.7), 0 0 6px rgba(214, 0, 255, 0.5);
+    animation: neonSlide 2s ease-in-out infinite alternate;
+}
+
+.header-section p {
     margin: 0 auto;
     max-width: 800px;
-  }
-  .colored {
+}
+
+.colored {
     color: #d600ff;
-  }
-  .marker {
-    background-color: rgba(214,0,255,0.3);
+}
+
+.marker {
+    background-color: rgba(214, 0, 255, 0.3);
     padding: 0 3px;
     border-radius: 3px;
-  }
-  h2 {
+}
+
+h2 {
     color: #d600ff;
     font-size: 1.8em;
     margin-bottom: 5px;
-  }
-  .achievements-list {
+}
+
+.achievements-list {
     list-style: none;
     padding: 0;
     margin: 5px 0 0;
-  }
-  .achievements-list li {
+}
+
+.achievements-list li {
     margin-bottom: 5px;
     padding-left: 30px;
     position: relative;
     font-size: 1em;
     display: flex;
     align-items: center;
-  }
-  .achievements-list li img {
+}
+
+.achievements-list li img {
     width: 16px;
     height: 16px;
     margin-right: 5px;
-  }
-  .extra-text {
+}
+
+.extra-text {
     margin-top: 5px;
-  }
-  .offer {
+}
+
+.offer {
     margin-bottom: 10px;
     text-align: center;
-  }
-  .offer-text {
-    font-size: 1.4em;
+}
+
+.offer-text {
+    font-size: 1.2em;
     color: #54c1e6;
     animation: neonOffer 3s ease-in-out infinite alternate;
-  }
-  .tech-grid {
-    display: flex;
-    flex-wrap: wrap;
+}
+
+.experience {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
     margin-top: 10px;
-  }
-  .tech-item {
+}
+
+.tech-item {
     display: inline-flex;
     align-items: center;
     gap: 5px;
     background: rgba(0, 255, 232, 0.1);
     padding: 6px 8px;
     border-radius: 4px;
-  }
-  .tech-item img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(214, 0, 255, 0.7);
+}
+
+.tech-item img {
     width: 40px;
     height: 40px;
     object-fit: contain;
-  }
-  .blink {
+}
+
+.blink {
     margin-bottom: 5px;
-  }
-  .reveal {
+}
+
+.reveal {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateX(-30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.active {
+}
+
+.reveal.active {
     opacity: 1;
-    transform: translateY(0);
-  }
-  @keyframes neonBlink {
+    transform: translateX(0);
+}
+
+@keyframes neonSlide {
     from {
-      text-shadow: 0 0 3px rgba(214,0,255,0.7), 0 0 6px rgba(214,0,255,0.5);
+        text-shadow: 0 0 3px rgba(214, 0, 255, 0.7), 0 0 6px rgba(214, 0, 255, 0.5);
     }
+
     to {
-      text-shadow: 0 0 5px rgba(214,0,255,0.9), 0 0 8px rgba(214,0,255,0.7);
+        text-shadow: 0 0 5px rgba(214, 0, 255, 0.9), 0 0 8px rgba(214, 0, 255, 0.7);
     }
-  }
-  @keyframes neonOffer {
+}
+
+@keyframes neonOffer {
     from {
-      text-shadow: 0 0 3px rgba(84,193,230,0.7), 0 0 6px rgba(84,193,230,0.5);
+        text-shadow: 0 0 3px rgba(84, 193, 230, 0.7), 0 0 6px rgba(84, 193, 230, 0.5);
     }
+
     to {
-      text-shadow: 0 0 5px rgba(84,193,230,0.9), 0 0 8px rgba(84,193,230,0.7);
+        text-shadow: 0 0 5px rgba(84, 193, 230, 0.9), 0 0 8px rgba(84, 193, 230, 0.7);
     }
-  }
-  
+}
