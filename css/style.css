@@ -18,10 +18,10 @@ body {
     padding-bottom: 10px;
   }
   .header-section h1 {
-    color: #d18cff;
+    color: #d600ff;
     font-size: 2em;
     margin: 0 0 5px;
-    text-shadow: 0 0 3px rgba(209,140,255,0.7), 0 0 6px rgba(209,140,255,0.5);
+    text-shadow: 0 0 3px rgba(214,0,255,0.7), 0 0 6px rgba(214,0,255,0.5);
     animation: neonBlink 2s ease-in-out infinite alternate;
   }
   .header-section p {
@@ -29,15 +29,15 @@ body {
     max-width: 800px;
   }
   .colored {
-    color: #d18cff;
+    color: #d600ff;
   }
   .marker {
-    background-color: rgba(209,140,255,0.3);
+    background-color: rgba(214,0,255,0.3);
     padding: 0 3px;
     border-radius: 3px;
   }
   h2 {
-    color: #d18cff;
+    color: #d600ff;
     font-size: 1.8em;
     margin-bottom: 5px;
   }
@@ -62,50 +62,36 @@ body {
   .extra-text {
     margin-top: 5px;
   }
-  .skills-list {
-    list-style: none;
-    padding: 0;
+  .offer {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .offer-text {
+    font-size: 1.4em;
+    color: #54c1e6;
+    animation: neonOffer 3s ease-in-out infinite alternate;
+  }
+  .tech-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
-  .skills-list li {
-    display: flex;
+  .tech-item {
+    display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     background: rgba(0, 255, 232, 0.1);
     padding: 6px 8px;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    border-radius: 4px;
   }
-  .skills-list li:hover {
-    transform: scale(1.05);
-  }
-  .skills-list img {
+  .tech-item img {
     width: 40px;
     height: 40px;
     object-fit: contain;
   }
-  .tech-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    margin-top: 10px;
-  }
-  .tech-grid div {
-    background: rgba(0, 255, 232, 0.1);
-    padding: 6px;
-    border-radius: 4px;
-    text-align: center;
-  }
   .blink {
     margin-bottom: 5px;
-    text-align: center;
-  }
-  .neon {
-    color: #d18cff;
-    animation: neonBlink 3s ease-in-out infinite alternate;
   }
   .reveal {
     opacity: 0;
@@ -118,10 +104,18 @@ body {
   }
   @keyframes neonBlink {
     from {
-      text-shadow: 0 0 3px rgba(209,140,255,0.7), 0 0 6px rgba(209,140,255,0.5);
+      text-shadow: 0 0 3px rgba(214,0,255,0.7), 0 0 6px rgba(214,0,255,0.5);
     }
     to {
-      text-shadow: 0 0 5px rgba(209,140,255,0.9), 0 0 8px rgba(209,140,255,0.7);
+      text-shadow: 0 0 5px rgba(214,0,255,0.9), 0 0 8px rgba(214,0,255,0.7);
+    }
+  }
+  @keyframes neonOffer {
+    from {
+      text-shadow: 0 0 3px rgba(84,193,230,0.7), 0 0 6px rgba(84,193,230,0.5);
+    }
+    to {
+      text-shadow: 0 0 5px rgba(84,193,230,0.9), 0 0 8px rgba(84,193,230,0.7);
     }
   }
   
