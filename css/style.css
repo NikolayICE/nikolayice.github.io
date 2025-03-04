@@ -344,15 +344,15 @@ h2.revealed::after {
 
 @media (max-width: 768px) {
     body {
-        font-size: 1.31em;
+        font-size: 1.3em;
     }
 
     .nav-list li a {
-        font-size: 0.9em;
+        font-size: 0.91em;
     }
 
     .portrait-container {
-        margin-top: 20px;
+        margin-top: 25px;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -392,6 +392,6 @@ h2.revealed::after {
         font-size: 0.93em;
     }
     .section {
-        margin-bottom: 0px; 
+        margin-bottom: 0.5px; 
       }
 }
