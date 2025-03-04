@@ -239,6 +239,8 @@ h2.revealed::after {
 .contact-info a {
     color: #bb88cc;
     text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .contact-buttons-container {
@@ -340,6 +342,10 @@ h2.revealed::after {
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 1.1em;
+    }
+
     .about-container {
         flex-direction: column;
         align-items: center;
