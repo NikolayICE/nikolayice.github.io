@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(reveal);
     });
 
-
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-list li a');
     const navObserverOptions = { rootMargin: '-50% 0px -50% 0px' };
