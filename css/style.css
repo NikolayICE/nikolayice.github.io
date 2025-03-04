@@ -344,12 +344,17 @@ h2.revealed::after {
 
 @media (max-width: 768px) {
     body {
-        font-size: 1.1em;
+        font-size: 1.3em;
     }
 
     .nav-list li a {
         font-size: 0.9em;
     }
+
+    .portrait-container {
+        display: block;
+        margin: 0 auto; 
+      }
 
     .about-container {
         flex-direction: column;
