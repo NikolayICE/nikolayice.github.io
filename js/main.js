@@ -20,9 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(reveal);
     });
 
+
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-list li a');
-    const navObserverOptions = { threshold: 0.5 };
+    const navObserverOptions = { rootMargin: '-50% 0px -50% 0px' };
     const navObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             const id = entry.target.getAttribute('id');
