@@ -344,11 +344,11 @@ h2.revealed::after {
 
 @media (max-width: 768px) {
     body {
-        font-size: 1.33em;
+        font-size: 1.31em;
     }
 
     .nav-list li a {
-        font-size: 0.93em;
+        font-size: 0.9em;
     }
 
     .portrait-container {
