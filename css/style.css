@@ -348,7 +348,7 @@ h2.revealed::after {
     }
 
     .nav-list li a {
-        font-size: 1em;
+        font-size: 0.93em;
     }
 
     .portrait-container {
@@ -389,7 +389,7 @@ h2.revealed::after {
     }
 
     .contact-info {
-        font-size: 1em;
+        font-size: 0.93em;
     }
     .section {
         margin-bottom: 0px; 
